@@ -1,6 +1,7 @@
 package atividades;
 
 import java.util.Scanner;
+//Faça um programa que receba um número, calcule e mostre a tabuada desse número.
 public class Atividade04{
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
