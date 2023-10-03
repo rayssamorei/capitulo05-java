@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Atividade01
  * Faça um programa que leia cinco grupos de quatro valores (A, B, C, D) e
- * mostre-os na ordem lida. Em seguida, organize-os em ordem crescente e 
+ * mostre-os na ordem lida. Em seguida, organize-os em ordem crescente e
  * decrescente.
  */
 public class Atividade01 {
