@@ -43,7 +43,7 @@ public class Atividade07{
 
         System.out.println("A quantidade de pessoas com idade superior a 50 anos: " + idadeMaior50 );
         System.out.println("a média das alturas das pessoas com idade entre 10 e 20 anos: " + mediaAlturas);
-        System.out.println("a porcentagem de pessoas com peso inferior a 40 kg entre todas as pessoas analisadas: " + perPeso "%");
+        System.out.println("a porcentagem de pessoas com peso inferior a 40 kg entre todas as pessoas analisadas: " + perPeso + "%");
 
         entrada.close();
     }
