@@ -6,20 +6,37 @@ import java.util.Scanner;
  * números que foram digitados. */
 public class Atividade12 {
     public static void main(String[] args) {
-        var entrada = new Scanner(System.in);
-        int num, primo = 0, qntPrimos = 0;
-        
-        for (int i = 0; i < 10; i++){
-            System.out.println("Informe um número: ");
-            num = entrada.nextInt();
+        Scanner input = new Scanner(System.in);
 
-            if(num % 2 == 0){
-                primo++;
-                qntPrimos =+ primo;
+        int quantidadeNumerosPrimos = 0;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite o " + i + "º número inteiro: ");
+            int numero = input.nextInt();
+
+            if (ehPrimo(numero)) {
+                quantidadeNumerosPrimos++;
             }
         }
 
-        System.out.println("A quantidade de números primos dentre os valores que você digitou anteriormente é: " + qntPrimos);
+        System.out.println("Quantidade de números primos entre os números digitados: " + quantidadeNumerosPrimos);
+
+        input.close();
+    }
+
+    // Função para verificar se um número é primo
+    public static boolean ehPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
         
         entrada.close();
     }

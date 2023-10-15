@@ -21,7 +21,7 @@ public class Atividade17 {
         int totalAudiencia =0, numeroCanal, numeroDePessoas =0, indiceCanal;
         double porcentagem =0;
 
-        System.out.println("Informe o número do canal, o número de pessoas asstindo esse canal ou (Informe 0 para encerrar)");
+        System.out.println("Informe o número do canal e o número de pessoas asstindo esse canal ou (Informe 0 para encerrar)");
 
         while (true) {
             numeroCanal = input.nextInt();
