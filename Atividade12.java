@@ -1,42 +1,34 @@
 package atividades;
 
 import java.util.Scanner;
-
-/**Faça um programa que receba dez números inteiros e mostre a quantidade de números primos dentre os
- * números que foram digitados. */
+/**
+ * Faça um programa que receba dez números inteiros e mostre a quantidade de
+ * números primos dentre os números que foram digitados.
+ */
 public class Atividade12 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        var entrada = new Scanner(System.in);
+        int num = 0,  totalPrimos = 0;
+        boolean primo = true;
 
-        int quantidadeNumerosPrimos = 0;
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Digite o " + i + "º número inteiro: ");
-            int numero = input.nextInt();
-
-            if (ehPrimo(numero)) {
-                quantidadeNumerosPrimos++;
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Informe um número inteiro: ");
+            num = entrada.nextInt();
+            if (num < 2) {
+                primo = false;
             }
-        }
-
-        System.out.println("Quantidade de números primos entre os números digitados: " + quantidadeNumerosPrimos);
-
-        input.close();
-    }
-
-    // Função para verificar se um número é primo
-    public static boolean ehPrimo(int numero) {
-        if (numero <= 1) {
-            return false;
-        }
-
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                return false;
+            for (int j = 2; j <= Math.sqrt(num)+1;j++) {
+                if (num % j == 0) {
+                    primo = false;
+                }
             }
+            if (primo || num == 2)  {
+                totalPrimos++;
+            }
+            primo = true;
         }
 
-        return true;
-        
+        System.out.println("O total de números primos digitados é: "+totalPrimos);
+        entrada.close();
     }
 }
