@@ -38,6 +38,5 @@ public class Atividade12 {
 
         return true;
         
-        entrada.close();
     }
 }
